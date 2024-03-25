@@ -1,5 +1,3 @@
-
-
 local module = {}
 local httpService = game:GetService("HttpService")
 type WebhookData = {
@@ -13,12 +11,12 @@ type WebhookData = {
 			url: string | nil,
 			description: string | nil,
 			color: string | number | nil,
-			fields: { { name: string, value: string, inline: boolean } } | nil,
+			fields: { { name: string, value: string, inline: boolean } },
 			thumbnail: { url: string } | nil,
 			image: { url: string } | nil,
 			footer: { text: string, icon_url: string } | nil,
 		}
-	} | nil,
+	},
 }
 function module:SendWebhook(data: WebhookData)
 	local success, err = pcall(function()

@@ -1,5 +1,5 @@
-local module = {}
-module.Player = {}
+local module = {Player = {}}
+
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 local CONSTANTS = { maxRayDistance = 400 }
@@ -15,11 +15,11 @@ function module.Player.isFacing()
 	)
 
 	if raycastResult then
-		print(
+--[[ 		print(
 			("Hit something: %s, which is %.1f studs away!"):format(raycastResult.Instance.Name, raycastResult.Distance)
-		)
+		) ]]
 	else
-		print("Didn't hit anything")
+		--[[ print("Didn't hit anything") ]]
 	end
 end
 return module
